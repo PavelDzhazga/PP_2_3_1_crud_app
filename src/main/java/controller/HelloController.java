@@ -1,4 +1,4 @@
-package web.controller;
+package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -10,7 +10,7 @@ import java.util.List;
 @Controller
 public class HelloController {
 
-	@GetMapping(value = "/Hello")
+	@GetMapping(value = "/")
 	public String printWelcome(ModelMap model) {
 		List<String> messages = new ArrayList<>();
 		messages.add("Hello!");

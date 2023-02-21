@@ -1,16 +1,15 @@
-package Service;
+package service;
 
-import Model.Car;
+import model.Car;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class CarServiceImpl implements CarService {
 
-    private Integer count;
+    private int count;
 
     private final static List<Car> carOnList = List.of(
             new Car("BMW", "White", 1999),
@@ -22,7 +21,7 @@ public class CarServiceImpl implements CarService {
 
 
     @Override
-    public List<Car> getListCars(Integer count) {
+    public List<Car> getListCars(int count) {
         if (count > 0 && count < carOnList.size()) {
             return carOnList.subList(0, count);
         }
