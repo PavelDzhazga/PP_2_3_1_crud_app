@@ -3,26 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Cars</title>
 </head>
 <body>
-<h1 th:text="${carOnList}"></h1>
-<table class="table table-dark">
+<table border="1" width="900" style="border-collapse:collapse" align="center">
     <thead>
     <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Color</th>
-        <th scope="col">Age</th>
+        <th>Model</th>
+        <th>Series</th>
+        <th>Year Of Issue</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="Car: ${carOnList}">
-        <td th:text="${Car.getName()}"/>
-        <td th:text="${Car.getColor()}"/>
-        <td th:text="${Car.getAge()}"/>
+    <tr th:each="car : ${carList}">
+        <td align="center" th:utext="${car.getName()}"></td>
+        <td align="center" th:utext="${car.getColor()}"></td>
+        <td align="center" th:utext="${car.getAge()}"></td>
     </tr>
     </tbody>
 </table>
-
 </body>
 </html>

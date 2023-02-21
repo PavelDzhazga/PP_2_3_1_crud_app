@@ -8,6 +8,6 @@ import java.util.List;
 @Service
 public interface CarService {
 
-    List<Car> getListCars(int count);
-    List<Car> getCar();
+    List<Car> getListCars();
+    List<Car> getCarByCount(List<Car> carList, int count);
 }
