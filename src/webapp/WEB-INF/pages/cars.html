@@ -7,9 +7,10 @@
 <body>
 <div>
     <th:block th:each="car : ${cars}">
-        <h1 th:text="${car.getName()}"></h1>
-        <h1 th:text="${car.getColor()}"></h1>
-        <h1 th:text="${car.getAge()}"></h1>
+        <SPAN th:text="${car.getName()}"></SPAN>
+        <SPAN th:text="${car.getColor()}"></SPAN>
+        <SPAN th:text="${car.getAge()}"></SPAN>
+        <br>
     </th:block>
 </div>
 </body>

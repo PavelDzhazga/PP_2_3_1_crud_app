@@ -13,12 +13,15 @@ import web.service.CarServiceImpl;
 @Controller
 public class CarController {
 
-    private final CarServiceImpl carServiceimpl = new CarServiceImpl();
+    private CarService carService;
 
+    public CarController(CarService carService) {
+        this.carService = carService;
+    }
 
     @GetMapping(value = "/cars")
     public String getCar(@RequestParam(value = "count", defaultValue = "5", required = false) int count, Model model) {
-        model.addAttribute("cars", carServiceimpl.getCarByCount(count));
+        model.addAttribute("cars", carService.getCarByCount(count));
         return "cars";
     }
 }
