@@ -76,8 +76,8 @@
             <tr>
                 <td th:text="${user.id}"></td>
                 <td th:text="${user.name}"></td>
+                <td th:text="${user.secondName}"></td>
                 <td th:text="${user.age}"></td>
-                <td th:text="${user.email}"></td>
                 <td>
                     <a href="#" th:href="@{/edit/{linkTitle}(linkTitle=${user.id})}" th:text="Изменить"></a>
                     <form th:action="@{/delete/{id}(id=${user.id})}" th:method="DELETE">
