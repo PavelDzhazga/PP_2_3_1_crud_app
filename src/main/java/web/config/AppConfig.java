@@ -46,7 +46,7 @@ public class AppConfig {
         return em;
     }
 
-     Properties addProperties() {
+    Properties addProperties() {
         Properties properties = new Properties();
         properties.setProperty("hibernate.hbm2ddl.auto", "update");
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
@@ -67,7 +67,6 @@ public class AppConfig {
     public PersistenceExceptionTranslationPostProcessor exceptionTranslationPostProcessor() {
         return new PersistenceExceptionTranslationPostProcessor();
     }
-
 
 
 }
